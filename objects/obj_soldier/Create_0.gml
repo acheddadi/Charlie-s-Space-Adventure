@@ -4,8 +4,10 @@ SPEED = 6;
 FIRE_SPEED = 6;
 KNOCKBACK = 2;
 
-spd = 0;
-fireSpd = 6;
+enum Special { SINGLE = obj_bullet, DOUBLE = obj_double, SHOTGUN = obj_shotgun, BLASTER };
+currentSpecial = Special.SINGLE;
+
+spd = SPEED;
 timeElapsed = 0;
 knockBack = 2;
 

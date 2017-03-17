@@ -1,4 +1,5 @@
 /// @description Insert description here
-// You can write your code in this editor
-x = (obj_soldier.x + obj_mouse.x) / 2;
-y = (obj_soldier.y + obj_mouse.y) / 2;
+// Camera object will be at one third of the way from the soldier in the direction of the mouse.
+
+x = ((2/3 * obj_soldier.x) + (1/3 * obj_mouse.x));
+y = ((2/3 * obj_soldier.y) + (1/3 * obj_mouse.y));
