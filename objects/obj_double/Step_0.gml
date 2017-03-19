@@ -9,20 +9,26 @@ if (bullets > 0)
 {
 	with (instance_create_layer(x, y, "projectileLayer", obj_bullet))
 	{
-		double = true;
 		direction = point_direction(x, y, mouse_x, mouse_y);
+		direction += other.scatter;
+		image_angle = direction;
+		speed = 16;
 	}
 	bullets--;
 	with (instance_create_layer(x + (25 * firstNormX), y + (25 * firstNormY), "projectileLayer", obj_bullet))
 	{
-		double = true;
 		direction = point_direction(x, y, mouse_x+ (25 * firstNormX), mouse_y + (25 * firstNormY));
+		direction += other.scatter;
+		image_angle = direction;
+		speed = 16;
 	}
 	bullets--;
 	with (instance_create_layer(x + (25 * secondNormX), y + (25 * secondNormY), "projectileLayer", obj_bullet))
 	{
-		double = true;
 		direction = point_direction(x, y, mouse_x + (25 * secondNormX), mouse_y + (25 * secondNormY));
+		direction += other.scatter;
+		image_angle = direction;
+		speed = 16;
 	}
 	bullets--;
 }

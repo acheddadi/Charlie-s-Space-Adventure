@@ -24,7 +24,7 @@ switch(currentSpecial)
 	fireDelay = 6;
 	break;
 	case Special.DOUBLE:
-	fireDelay = 6;
+	fireDelay = 8;
 	break;
 	case Special.SHOTGUN:
 	fireDelay = 12;
@@ -49,6 +49,7 @@ if (abs(hspd) == abs(vspd))
 {
 	hspd = sign(hspd) * (spd/(sqrt(2)));
 	vspd = sign(vspd) * (spd/(sqrt(2)));
+	hspd = round(hspd); vspd = round(vspd);
 }
 
 image_angle = point_direction(x,y,mouse_x, mouse_y);

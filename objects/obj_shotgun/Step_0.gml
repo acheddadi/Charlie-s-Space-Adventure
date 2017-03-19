@@ -13,9 +13,10 @@ if (bullets > 0)
 {
 	with (instance_create_layer(x, y, "projectileLayer", obj_bullet))
 	{
-		shotgun = true;
 		direction = point_direction(x, y, newMouseX, newMouseY);
-		direction += random_range(-4,4);
+		direction += other.scatter;
+		image_angle = direction;
+		speed = 16;
 	}
 }
 bullets--;
