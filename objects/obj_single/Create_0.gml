@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-with (instance_create_layer(x, y, "projectileLayer", obj_laser))
+with (instance_create_layer(x, y, "projectileLayer", obj_bullet))
 {
 	direction = point_direction(x,y,mouse_x,mouse_y);
 	direction += random_range(-4,4);
